@@ -1,0 +1,27 @@
+﻿@model Parcial1.Models.CaidaDadoModel
+
+@{
+    ViewData["Title"] = "Calculadora de Caída";
+}
+
+<h1>Calculadora de Caída de un Dado</h1>
+
+<form asp-controller="caida" asp-action="Calcular">
+    <div class="form-group">
+        <label for="DatoInicial">Colocar un número</label>
+        <input type="number" asp-for="DatoInicial" class="form-control" required />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Calcular</button>
+    <br />
+    <br />
+</form>
+
+<!--DATO MOSTRADO EN PANTALLA-->
+<h2>Resultados</h2>
+<table class="table">
+    <tr>
+        <th>Número Aleatorio Generado</th>
+        <td>@Model.NumeroAleatorio</td>
+    </tr>
+</table>

@@ -1,0 +1,14 @@
+﻿@model Parcial1.Models.CaidaDadoModel
+
+@{
+    ViewData["Title"] = "Resultado";
+}
+
+<h1>Resultado</h1>
+
+<p><strong>Dato Inicial:</strong> @Model.DatoInicial</p>
+<p><strong>Caída Calculada:</strong> @Model.Caida</p>
+<p><strong>Dato Final:</strong> @Model.DatoFinal</p>
+<p><strong>Número Aleatorio Generado:</strong> @Model.NumeroAleatorio</p>
+
+<a href="@Url.Action("Index", "Caida")" class="btn btn-secondary">Volver</a>
